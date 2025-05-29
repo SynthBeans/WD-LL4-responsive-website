@@ -1,0 +1,185 @@
+/* Set the main font for the whole page */
+body {
+  font-family: Verdana, Geneva, sans-serif; /* Easy to read font for body text */
+  background-color: #e6f7f1; /* Soft blue-green background */
+  color: #222; /* Dark text for good contrast */
+}
+
+/* Use a bold, clear font for all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial Black', Arial, sans-serif; /* Bold font for headings */
+  color: #2e8b57; /* Soft green for headings */
+}
+
+/* Style for the header */
+header {
+  /* Use flexbox to arrange logo and nav vertically on mobile */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background-color: #d0eaf7; /* Soft blue background for header */
+}
+
+/* Style for the logo */
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #43995f; /* Soft green for logo */
+}
+
+/* Remove default list styling from nav links */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Style each navigation link */
+.nav-links li {
+  margin: 8px 0;
+  text-align: center;
+}
+
+/* Style the anchor tags */
+.nav-links a {
+  text-decoration: none;
+  color: #2e8b57; /* Soft green for links */
+  background-color: #d0eaf7; /* Light blue-green background for links */
+  border-radius: 4px; /* Rounded corners for links */
+  transition: background 0.2s;
+}
+
+/* Change link color on hover */
+.nav-links a:hover {
+  background-color: #b2dfdb; /* Slightly darker green-blue on hover */
+  color: #156064; /* Darker blue-green text on hover */
+}
+
+/* On larger screens, show nav links in a row */
+@media (min-width: 700px) {
+  header {
+    /* Arrange logo and nav side by side */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    background-color: #d0eaf7;
+  }
+  .nav-links li {
+    margin: 0 12px;
+    text-align: left;
+  }
+}
+
+/* Hero section styles */
+.hero {
+  /* Linear gradient background: soft green to soft blue */
+  background: linear-gradient(135deg, #e6f7f1 0%, #b2dfdb 50%, #d0eaf7 100%); /* Updated for a more visible gradient */
+  padding: 48px 16px; /* Space around the content */
+  text-align: center; /* Center the text */
+  width: 100vw; /* Make hero section span the full viewport width */
+  max-width: none; /* Remove max-width so it fills the screen */
+  border-radius: 0; /* Remove rounded corners for full width */
+  margin: 0; /* Remove margin for edge-to-edge effect */
+  min-height: 100vh; /* Make hero section fill the whole viewport height */
+  display: flex; /* Use flex to center content */
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.hero h1 {
+  font-size: 2.2em; /* Larger headline */
+  margin-bottom: 16px;
+  color: #2e8b57; /* Soft green for headline */
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #156064; /* Gentle blue for paragraph */
+  margin: 0;
+}
+
+/* Call to action button styles */
+.cta-btn {
+  display: inline-block;
+  margin-top: 24px; /* Space above the button */
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #fff; /* White text */
+  background-color: #2e8b57; /* Soft green background */
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cta-btn:hover {
+  background-color: #156064; /* Darker blue-green on hover */
+}
+
+/* Destinations section styles */
+.destinations {
+  padding: 40px 16px;
+  background: #e6f7f1; /* Soft background to match theme */
+  text-align: center;
+}
+
+.destinations h2 {
+  color: #2e8b57;
+  margin-bottom: 32px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically on mobile */
+  gap: 24px;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  padding: 20px 16px;
+  max-width: 340px;
+  width: 100%;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+  color: #156064;
+}
+
+.card p {
+  margin: 0;
+  color: #333;
+  font-size: 1em;
+}
+
+/* Desktop layout: cards align horizontally */
+@media (min-width: 700px) {
+  .card-list {
+    flex-direction: row; /* Align cards in a row on desktop */
+    justify-content: center;
+  }
+}
